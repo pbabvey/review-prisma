@@ -20,7 +20,7 @@ def query_db(depth_min, grad_min):
     return cursor.execute(query).fetchall()
 
 
-def plot():
+def plot_():
     """Return JSON of Altair chart."""
 
     df_cars = data.cars()
@@ -30,6 +30,7 @@ def plot():
         tooltip=['Name', 'Year', 'Origin']
 
     )
+
 
 
     return chart.to_json()

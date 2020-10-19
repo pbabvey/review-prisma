@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-from plot import plot_wells, query_db
+from plot import plot_, query_db
 
 app = Flask(__name__)
 
@@ -14,7 +14,7 @@ def plot():
     depth_min = request.form['depth_min']
     grad_min = request.form['grad_min']
 
-    chart_json = plot()
+    chart_json = plot_()
     
     return render_template('plot.html', chart=chart_json)
 
